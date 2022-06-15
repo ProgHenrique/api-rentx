@@ -9,18 +9,14 @@ module.exports = {
       "module-resolver",
       {
         alias: {
-          "@modules": [
-            "./src/modules"
-          ],
-          "@config": [
-            "./src/config"
-          ],
-          "@shared": [
-            "./src/shared"
-          ],
-          "@utils": [
-            "./src/utils"
-          ]
+          "@modules": "./src/modules"
+          ,
+          "@config": "./src/config"
+          ,
+          "@shared": "./src/shared"
+          ,
+          "@utils": "./src/utils"
+
         }
       }
     ],
