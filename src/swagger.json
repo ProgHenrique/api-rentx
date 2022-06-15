@@ -1,0 +1,78 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Rentx Documentation",
+    "description": "Api for cars rent",
+    "version": "1.0.0",
+    "contact": {
+      "email": "henriqueramos2022@outlook.com"
+    }
+  },
+  "paths": {
+    "/categories": {
+      "post": {
+        "tags": ["Category"],
+        "sumarry": "Create a cars category",
+        "description": "Receive a name and description of the car and save a object category in database",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "Category name sample",
+                  "description": "Category Description sample"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Category"],
+        "sumarry": "List all categories cars",
+        "description": "Return a full list of cars category",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json":{
+                "schema": {
+                  "type":"array",
+                  "items":{
+                    "type": "object",
+                    "properties":{
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
